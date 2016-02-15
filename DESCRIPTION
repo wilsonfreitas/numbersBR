@@ -13,3 +13,8 @@ License: MIT + file LICENSE
 LazyData: true
 RoxygenNote: 5.0.0
 Suggests: testthat
+Collate:
+    'util.R'
+    'CNPJ.R'
+    'CPF.R'
+    'rBR.R'
