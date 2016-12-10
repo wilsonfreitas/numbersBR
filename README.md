@@ -1,6 +1,6 @@
-# rBR
+# numbersBR
 
-The rBR package aims to help with brazilian numbers used to identify companies and individuals (CNPJ and CPF, for example).
+The numbersBR package aims to help with brazilian numbers used to identify companies and individuals (CNPJ and CPF, for example).
 
 The package provides functions to validate, format and execute comparisons of these numbers when they come in different formats, for example, compare a numeric CPF against a character CPF.
 The functions are implemented in a vectorized way in order to speed up validations and comparison in large datasets.
@@ -10,7 +10,7 @@ The functions are implemented in a vectorized way in order to speed up validatio
 The package can be installed directly from github using devtools.
 
 ```{r}
-devtools::install_github('wilsonfreitas/rBR')
+devtools::install_github('wilsonfreitas/numbersBR')
 ```
 
 ## Using
