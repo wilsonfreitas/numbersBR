@@ -1,9 +1,9 @@
-#' rBR
+#' numbersBR
 #'
 #' CPF
 #' CNPJ
 #'
-#' @name rBR
+#' @name numbersBR
 #' @docType package
 #'
 #' @import stringr
