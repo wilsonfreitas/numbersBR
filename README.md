@@ -1,6 +1,6 @@
 # numbersBR
 
-The numbersBR package aims to help with brazilian numbers used to identify companies and individuals (CNPJ and CPF, for example).
+The numbersBR package aims to help with brazilian numbers used to identify companies, individuals and cars (CNPJ, CPF and RENAVAN, for example).
 
 The package provides functions to validate, format and execute comparisons of these numbers when they come in different formats, for example, compare a numeric CPF against a character CPF.
 The functions are implemented in a vectorized way in order to speed up validations and comparison in large datasets.
@@ -32,8 +32,11 @@ The numbers can be created with numeric or character vectors:
 [1] TRUE TRUE TRUE
 > x == 68194359406
 [1]  TRUE FALSE FALSE
+> x <- RENAVAN(c(75320797785, 91671999129))
+> is.valid(x)
+[1] TRUE TRUE
 ```
 
 ## Contribute
 
-For now we have CPF and CNPJ implemented, so if you need another number or, even better, if you have it implemented, get in touch so we can add new numbers to the package.
+For now we have CPF, CNPJ and RENAVAN implemented, so if you need another number or, even better, if you have it implemented, get in touch so we can add new numbers to the package.
