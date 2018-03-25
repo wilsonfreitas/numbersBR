@@ -4,7 +4,8 @@
 
 The numbersBR package aims to help with brazilian numbers used to identify companies, individuals and cars (CNPJ, CPF and RENAVAN, for example).
 
-The package provides functions to validate, format and execute comparisons of these numbers when they come in different formats, for example, compare a numeric CPF against a character CPF.
+The package provides functions to validate, format and execute comparisons of these numbers when they come in different formats.
+For example, compare a numeric CPF against a character CPF.
 The functions are implemented in a vectorized way in order to speed up validations and comparison in large datasets.
 
 ## Install
