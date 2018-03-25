@@ -1,5 +1,7 @@
 # numbersBR
 
+[![Travis build status](https://travis-ci.org/wilsonfreitas/numbersBR.svg?branch=master)](https://travis-ci.org/wilsonfreitas/numbersBR)
+
 The numbersBR package aims to help with brazilian numbers used to identify companies, individuals and cars (CNPJ, CPF and RENAVAN, for example).
 
 The package provides functions to validate, format and execute comparisons of these numbers when they come in different formats, for example, compare a numeric CPF against a character CPF.
