@@ -9,5 +9,6 @@ strip_numeric <- function(x) {
 
 
 #' @export
+#' @rdname is.valid
 is.valid <- function(x) UseMethod('is.valid', x)
 

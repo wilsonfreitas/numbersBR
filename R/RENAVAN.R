@@ -1,4 +1,7 @@
 #' @export
+#' @rdname numbers
+#' @examples
+#' RENAVAN(c(75320797785, 91671999129, 60885589380))
 RENAVAN <- function(x) {
   if ( is.character(x) ) {
     x <- stringr::str_pad(x, 11, pad="0")
@@ -13,6 +16,10 @@ RENAVAN <- function(x) {
 }
 
 #' @export
+#' @rdname format
+#' @examples
+#' x <- RENAVAN("68194359406")
+#' format(x)
 format.RENAVAN <- function(x, ...) {
   x <- unclass(x)
   as.character(x)
@@ -30,6 +37,9 @@ as.numeric.RENAVAN <- function(x, ...) {
 }
 
 #' @export
+#' @rdname is.valid
+#' @examples
+#' is.valid(RENAVAN(c(75320797785, 42752486198))) # TRUE, FALSE
 is.valid.RENAVAN <- function(x) {
   check_renavan <- function(renavan) {
     renavan <- strip_numeric(renavan)
@@ -47,11 +57,16 @@ is.valid.RENAVAN <- function(x) {
 }
 
 #' @export
+#' @rdname comparison-methods
+#' @examples
+#' x <- RENAVAN(68194359406)
+#' x == "68194359406"
 `==.RENAVAN` <- function(e1, e2) {
   unclass(e1) == unclass(RENAVAN(e2))
 }
 
 #' @export
+#' @rdname comparison-methods
 `!=.RENAVAN` <- function(e1, e2) {
   !(e1 == e2)
 }

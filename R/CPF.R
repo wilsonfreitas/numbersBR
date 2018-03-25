@@ -1,4 +1,8 @@
 #' @export
+#' @rdname numbers
+#' @examples
+#' CPF(c(68194359406, 1239157673, 52008275582))
+#' CPF(c("681.943.594-06", "012.391.576-73", "520.082.755-82"))
 CPF <- function(x) {
   if ( is.character(x) ) {
     x <- stringr::str_replace_all(x, '-', '')
@@ -15,6 +19,11 @@ CPF <- function(x) {
 }
 
 #' @export
+#' @rdname format
+#' @examples
+#' x <- CPF(1239157673)
+#' format(x)
+#' format(x, "stripped")
 format.CPF <- function(x, format = c("strict", "stripped"), ...) {
   format = match.arg(format)
   x <- unclass(x)
@@ -40,6 +49,9 @@ as.numeric.CPF <- function(x, ...) {
 }
 
 #' @export
+#' @rdname is.valid
+#' @examples
+#' is.valid(CPF(c(1239157673, 42752486198))) # TRUE, FALSE
 is.valid.CPF <- function(x) {
   x1 <- as.numeric(x)
 
@@ -69,11 +81,16 @@ is.valid.CPF <- function(x) {
 }
 
 #' @export
+#' @rdname comparison-methods
+#' @examples
+#' x <- CPF(68194359406)
+#' x != "681.943.594-06"
 `==.CPF` <- function(e1, e2) {
   unclass(e1) == unclass(CPF(e2))
 }
 
 #' @export
+#' @rdname comparison-methods
 `!=.CPF` <- function(e1, e2) {
   !(e1 == e2)
 }

@@ -1,4 +1,9 @@
 #' @export
+#' @rdname numbers
+#' @examples
+#' CNPJ(c(13515463000138, 3737211000108, 360305000104, 66670000100))
+#' CNPJ(c("13.515.463/0001-38", "03.737.211/0001-08", "00.360.305/0001-04", "00.066.670/0001-00"))
+
 CNPJ <- function(x) {
   if ( is.character(x) ) {
     x <- stringr::str_replace_all(x, '-', '')
@@ -16,6 +21,11 @@ CNPJ <- function(x) {
 }
 
 #' @export
+#' @rdname format
+#' @examples
+#' x <- CNPJ(66670000100)
+#' format(x)
+#' format(x, "stripped")
 format.CNPJ <- function(x, format = c("strict", "stripped"), ...) {
   format = match.arg(format)
   x = unclass(x)
@@ -42,6 +52,9 @@ as.numeric.CNPJ <- function(x, ...) {
 }
 
 #' @export
+#' @rdname is.valid
+#' @examples
+#' is.valid(CNPJ(c(13515463000138, 66670000101))) # TRUE, FALSE
 is.valid.CNPJ <- function(x) {
   x <- unclass(x)
   x1 <- as.numeric(stringr::str_sub(x, 1, 12))
@@ -83,11 +96,16 @@ is.valid.CNPJ <- function(x) {
 }
 
 #' @export
+#' @rdname comparison-methods
+#' @examples
+#' x <- CNPJ(13515463000138)
+#' x == '13515463000138'
 `==.CNPJ` <- function(e1, e2) {
   unclass(e1) == unclass(CNPJ(e2))
 }
 
 #' @export
+#' @rdname comparison-methods
 `!=.CNPJ` <- function(e1, e2) {
   !(e1 == e2)
 }

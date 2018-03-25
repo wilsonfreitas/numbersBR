@@ -4,9 +4,15 @@
 \name{numbersBR}
 \alias{numbersBR}
 \alias{numbersBR-package}
-\title{numbersBR}
+\title{Validate, compare and format brazilian numbers}
 \description{
-CPF
-CNPJ
+This package helps handling identification numbers used in Brazil.
+These numbers are used to identify individuals (CPF), vehicles (RENAVAN),
+companies (CNPJ) and etc.
+Functions to format, validate and compare these numbers have been
+implemented in a vectorized way in order to speed up validations and
+comparisons in big datasets.
 }
-
+\author{
+Wilson Freitas
+}
