@@ -55,6 +55,7 @@ test_that('it should convert CPF into character', {
 test_that('it should CPF`s equality', {
 	x <- CPF(68194359406)
 	expect_true(x == 68194359406)
+	expect_true(x == x)
 	expect_true(x == "681.943.594-06")
 	expect_false(x != "681.943.594-06")
 	expect_false(x == "012.391.576-73")
