@@ -16,14 +16,18 @@ CNPJ <- function(x) {
 }
 
 #' @export
-format.CNPJ <- function(x, ...) {
-  x <- unclass(x)
-  sprintf("%s.%s.%s/%s-%s",
-          stringr::str_sub(x, 1, 2),
-          stringr::str_sub(x, 3, 5),
-          stringr::str_sub(x, 6, 8),
-          stringr::str_sub(x, 9, 12),
-          stringr::str_sub(x, 13, 14))
+format.CNPJ <- function(x, format = c("strict", "stripped"), ...) {
+  format = match.arg(format)
+  x = unclass(x)
+  if (format == "strict")
+    sprintf("%s.%s.%s/%s-%s",
+            stringr::str_sub(x, 1, 2),
+            stringr::str_sub(x, 3, 5),
+            stringr::str_sub(x, 6, 8),
+            stringr::str_sub(x, 9, 12),
+            stringr::str_sub(x, 13, 14))
+  else
+    as.character(x)
 }
 
 #' @export

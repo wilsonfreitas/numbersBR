@@ -15,13 +15,17 @@ CPF <- function(x) {
 }
 
 #' @export
-format.CPF <- function(x, ...) {
+format.CPF <- function(x, format = c("strict", "stripped"), ...) {
+  format = match.arg(format)
   x <- unclass(x)
-  sprintf("%s.%s.%s-%s",
-          stringr::str_sub(x, 1, 3),
-          stringr::str_sub(x, 4, 6),
-          stringr::str_sub(x, 7, 9),
-          stringr::str_sub(x, 10, 11))
+  if (format == "strict")
+    sprintf("%s.%s.%s-%s",
+            stringr::str_sub(x, 1, 3),
+            stringr::str_sub(x, 4, 6),
+            stringr::str_sub(x, 7, 9),
+            stringr::str_sub(x, 10, 11))
+  else
+    as.character(x)
 }
 
 #' @export

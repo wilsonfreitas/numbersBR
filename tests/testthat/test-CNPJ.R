@@ -34,6 +34,8 @@ test_that('it should format CNPJ', {
 	expect_equal(format(x), "13.515.463/0001-38")
 	x <- CNPJ(66670000100)
 	expect_equal(format(x), "00.066.670/0001-00")
+	expect_equal(format(x, "strict"), "00.066.670/0001-00")
+	expect_equal(format(x, "stripped"), "00066670000100")
 	x <- CNPJ(c(13515463000138, 3737211000108, 360305000104, 66670000100))
 	expect_equal(format(x), c("13.515.463/0001-38", "03.737.211/0001-08",
 		"00.360.305/0001-04", "00.066.670/0001-00"))
@@ -74,6 +76,7 @@ test_that('it should validate CNPJ', {
 
 test_that('it should CNPJ`s equality', {
 	x <- CNPJ(13515463000138)
+	expect_true(x == '13515463000138')
 	expect_true(x == 13515463000138)
 	expect_true(x == "13.515.463/0001-38")
 	expect_false(x != "13.515.463/0001-38")
