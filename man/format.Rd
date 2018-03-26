@@ -5,7 +5,7 @@
 \alias{format.CPF}
 \alias{format.RENAVAN}
 \alias{format}
-\title{format numbers}
+\title{Format numbers}
 \usage{
 \method{format}{CNPJ}(x, format = c("strict", "stripped"), ...)
 

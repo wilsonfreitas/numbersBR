@@ -8,7 +8,7 @@
 \alias{==.RENAVAN}
 \alias{!=.RENAVAN}
 \alias{comparison-methods}
-\title{compare numbers among themselves, with numeric and character objects.}
+\title{Compare numbers among themselves, with numeric and character objects.}
 \usage{
 \method{==}{CNPJ}(e1, e2)
 

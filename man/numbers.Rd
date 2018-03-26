@@ -5,7 +5,7 @@
 \alias{CPF}
 \alias{RENAVAN}
 \alias{numbers}
-\title{Brazilian numbers}
+\title{Functions to create brazilian numbers objects}
 \usage{
 CNPJ(x)
 

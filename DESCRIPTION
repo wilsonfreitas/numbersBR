@@ -1,10 +1,11 @@
 Package: numbersBR
-Title: Validate, compare and format brazilian numbers: CPF, CNPJ, and others
+Title: Validate, Compare and Format Identification Numbers From Brazil.
 Version: 0.0.2
 Authors@R: person("Wilson", "Freitas", email = "wilson.freitas@gmail.com", role = c("aut", "cre"))
-Description: This package helps handling numbers from Brazil.
-  These numbers are used to identify individuals (CPF), vehicles (RENAVAN), companies (CNPJ) and etc.
-  Functions to format, validate and compare these numbers have been
+Description: Validate, format and compare identification numbers used in Brazil.
+  These numbers are used to identify individuals (CPF), vehicles (RENAVAN),
+  companies (CNPJ) and etc.
+  Functions to format, validate and compare these numbers have been 
   implemented in a vectorized way in order to speed up
   validations and comparisons in big datasets.
 Depends:

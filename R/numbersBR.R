@@ -1,4 +1,4 @@
-#' Validate, compare and format brazilian numbers
+#' Validate, Compare and Format Identification Numbers From Brazil.
 #'
 #' This package helps handling identification numbers used in Brazil.
 #' These numbers are used to identify individuals (CPF), vehicles (RENAVAN),
@@ -14,7 +14,7 @@
 #' @import stringr
 NULL
 
-#' Brazilian numbers
+#' Functions to create brazilian numbers objects
 #'
 #' The brazilian numbers used to identify individuals, vehicles, companies and
 #' any other things have their own S3 classes.
@@ -26,7 +26,7 @@ NULL
 #' @name numbers
 NULL
 
-#' format numbers
+#' Format numbers
 #'
 #' Formats the brazilian numbers according to their specific format.
 #'
@@ -40,7 +40,7 @@ NULL
 #' @name format
 NULL
 
-#' validate numbers
+#' Validate numbers
 #'
 #' Validates the brazilian numbers when it is necessary.
 #' Not all identification numbers don't have a validation algorithm.
@@ -52,7 +52,7 @@ NULL
 #' @name is.valid
 NULL
 
-#' compare numbers among themselves, with numeric and character objects.
+#' Compare numbers among themselves, with numeric and character objects.
 #'
 #' Compares the brazilian numbers among themselves, with numeric and character objects.
 #'

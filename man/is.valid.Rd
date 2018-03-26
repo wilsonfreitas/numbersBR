@@ -7,7 +7,7 @@
 \alias{is.valid.CPF}
 \alias{is.valid.RENAVAN}
 \alias{is.valid}
-\title{validate numbers}
+\title{Validate numbers}
 \usage{
 is.valid(x)
 

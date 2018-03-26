@@ -4,7 +4,7 @@
 \name{numbersBR}
 \alias{numbersBR}
 \alias{numbersBR-package}
-\title{Validate, compare and format brazilian numbers}
+\title{Validate, Compare and Format Identification Numbers From Brazil.}
 \description{
 This package helps handling identification numbers used in Brazil.
 These numbers are used to identify individuals (CPF), vehicles (RENAVAN),
