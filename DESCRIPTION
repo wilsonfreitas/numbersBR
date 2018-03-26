@@ -1,5 +1,5 @@
 Package: numbersBR
-Title: Validate, Compare and Format Identification Numbers From Brazil.
+Title: Validate, Compare and Format Identification Numbers From Brazil
 Version: 0.0.2
 Authors@R: person("Wilson", "Freitas", email = "wilson.freitas@gmail.com", role = c("aut", "cre"))
 Description: Validate, format and compare identification numbers used in Brazil.
