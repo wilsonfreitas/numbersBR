@@ -14,8 +14,9 @@ License: MIT + file LICENSE
 LazyData: true
 RoxygenNote: 6.0.1
 Imports: stringr
-Suggests:
-    testthat
+Suggests: 
+    testthat,
+    covr
 Collate:
     'util.R'
     'CNPJ.R'
