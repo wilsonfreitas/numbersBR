@@ -1,7 +1,6 @@
 # numbersBR
 
 [![Travis build status](https://travis-ci.org/wilsonfreitas/numbersBR.svg?branch=master)](https://travis-ci.org/wilsonfreitas/numbersBR)
-
 [![Coverage status](https://codecov.io/gh/wilsonfreitas/numbersBR/branch/master/graph/badge.svg)](https://codecov.io/github/wilsonfreitas/numbersBR?branch=master)
 
 
@@ -13,7 +12,13 @@ The functions are implemented in a vectorized way in order to speed up validatio
 
 ## Install
 
-The package can be installed directly from github using devtools.
+From CRAN
+
+```{r}
+install.packages('numbersBR')
+```
+
+The package also can be installed directly from github using devtools.
 
 ```{r}
 devtools::install_github('wilsonfreitas/numbersBR')
